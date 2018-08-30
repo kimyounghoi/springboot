@@ -12,12 +12,6 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 	
-	@RequestMapping("/")
-	public List<Member> home() {
-		System.out.println("main page");
-		return service.getMemberList();
-	}
-
 	@RequestMapping("/test")
 	public List<Member> test() {
 		System.out.println("test page");
