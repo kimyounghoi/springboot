@@ -41,7 +41,8 @@ public class AuthProvider implements AuthenticationProvider{
 			return null;
 		}
 		List<GrantedAuthority> authList = new ArrayList<>();
-		/** role 처리 
+		/** 
+		 * Role 처리 필요, 일단 임의로 USER Role을 부여한다.  
 		**/
 		authList.add(new SimpleGrantedAuthority("ROLE_USER"));
 		return new MyAuthentication(id, pw, authList, m);

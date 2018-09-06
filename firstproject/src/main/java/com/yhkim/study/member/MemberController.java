@@ -28,7 +28,7 @@ public class MemberController {
 		if ( logout != null ) {
 			model.addAttribute("msg", "You have been logged out successfully");
 		}
-		return "login.html";
+		return "login.html"; 
 	}
 
 	// 로그인 실패시
