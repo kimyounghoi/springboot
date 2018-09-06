@@ -4,6 +4,16 @@
 
 <mapper namespace="com.yhkim.study.member.MemberMapper">
 	
+	<select id="getMemberByUserName" resultType="member">
+		SELECT  idx,
+				id,
+				name,
+				pw
+		FROM
+				test.members
+		WHERE
+				id = #{username}
+	</select>
 	<select id="getMemberList" resultType="member">
 		SELECT  idx,
 				id,

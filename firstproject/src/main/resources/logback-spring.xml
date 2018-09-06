@@ -6,8 +6,8 @@
         </layout>
     </appender>
 
-    <logger name="com.yhkim.study" level="INFO"/>
-    <root level="INFO">
+    <logger name="com.yhkim.study" level="DEBUG"/>
+    <root level="DEBUG">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

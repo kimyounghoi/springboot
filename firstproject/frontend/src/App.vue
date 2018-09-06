@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <p>
+      <router-link :to="{ name: 'home', params: {} }">home page</router-link>
+      <router-link :to="{ name: 'user', params: {} }">user page</router-link>
+      <router-link :to="{ name: 'admin', params: {} }">admin page</router-link>
+    </p>
   </div>
 </template>
 

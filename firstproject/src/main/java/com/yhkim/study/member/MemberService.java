@@ -15,6 +15,10 @@ public class MemberService {
 		return mapper.getMemberList();
 	}
 	
+	public Member getMemberByUserName(String username) {
+		return mapper.getMemberByUserName(username);
+	}
+	
 	public Member getMember(Member member) {
 		return mapper.getMember(member);
 	}

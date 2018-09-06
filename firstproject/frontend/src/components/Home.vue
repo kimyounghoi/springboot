@@ -7,10 +7,10 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data () {
     return {
-      msg: 'Welcome to My Spring Boot with Vue.js'
+      msg: 'Welcome to Home with Spring Boot and Vue.js'
     }
   }
 }

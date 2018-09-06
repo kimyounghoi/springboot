@@ -12,6 +12,13 @@ public class Member {
 	private String id;
 	private String name;
 	private String pw;
+	
+	public Member() {}
+	public Member(String id, String pw) {
+		this.id = id;
+		this.pw = pw;
+	}
+	
 	@Override
 	public String toString() {
 		return new StringBuilder("{ idx : ").append(idx).append(", id : ").append(id).append(", name : ").append(name).append(" }").toString();

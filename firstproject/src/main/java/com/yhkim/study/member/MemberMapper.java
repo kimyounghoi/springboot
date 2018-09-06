@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface MemberMapper {
+
+	Member getMemberByUserName(String username);
 	
 	List<Member> getMemberList();
 	
