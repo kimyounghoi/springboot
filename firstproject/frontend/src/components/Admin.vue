@@ -1,6 +1,6 @@
 <template>
   <div>
-    admin page
+    This is Admin Page
   </div>
 </template>
 

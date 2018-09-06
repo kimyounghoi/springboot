@@ -28,6 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers("/user/**").access("ROLE_USER")				// 사용자 페이지
 			.antMatchers("/admin/**").access("ROLE_ADMIN")				// 관리자 페이지
 			.antMatchers("/login").permitAll()
+			.antMatchers("/api/**").permitAll()
 			.antMatchers("/**").authenticated();
 	
 		http.formLogin()
