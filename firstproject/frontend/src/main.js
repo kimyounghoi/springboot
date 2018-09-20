@@ -3,12 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import axios from 'axios'
 import jquery from 'jquery'
 import './assets/js/bootstrap.min.js'
 import './assets/js/bootstrap-datepicker.min.js'
 import './assets/js/jquery.slimscroll.min.js'
 import './assets/js/adminlte.min.js'
+
 
 Vue.config.productionTip = false
 

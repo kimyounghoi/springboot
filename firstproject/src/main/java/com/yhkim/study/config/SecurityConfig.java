@@ -25,8 +25,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.csrf().disable();		// 개발 시 에만
 		
 		http.authorizeRequests()
-			.antMatchers("/user/**").access("ROLE_USER")				// 사용자 페이지
-			.antMatchers("/admin/**").access("ROLE_ADMIN")				// 관리자 페이지
+			.antMatchers("/user/**").access("hasRole('ROLE_USER')")				// 사용자 페이지
+			.antMatchers("/admin/**").access("hasRoe('ROLE_ADMIN')")				// 관리자 페이지
 			.antMatchers("/login").permitAll()
 			.antMatchers("/api/**").permitAll()
 			.antMatchers("/**").authenticated();

@@ -12,6 +12,8 @@ public class Member {
 	private String id;
 	private String name;
 	private String pw;
+	private String email;
+	private String cellphone;
 	
 	public Member() {}
 	public Member(String id, String pw) {
@@ -21,6 +23,6 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return new StringBuilder("{ idx : ").append(idx).append(", id : ").append(id).append(", name : ").append(name).append(" }").toString();
+		return new StringBuilder("{ idx : ").append(idx).append(", id : ").append(id).append(", name : ").append(name).append(", email : ").append(email).append(", cellphone : ").append(cellphone).append(" }").toString();
 	}
 }

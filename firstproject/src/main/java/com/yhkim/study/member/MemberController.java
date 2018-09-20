@@ -15,7 +15,7 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 
-	@RequestMapping(value= {"/", "/user", "/admin"})
+	@RequestMapping(value= {"/", "/user", "/admin", "/buttons"})
 	public String main() {
 		return "/index.html";
 	}
@@ -38,22 +38,4 @@ public class MemberController {
 		model.addAttribute("username",username);
 		return "login";
 	}
-	// admin 사용자 테스트 
-	@RequestMapping("/admin")
-	public String admin(){
-		return "/admin/admin";
-	}
-
-	// user 사용자 테스트 
-	@RequestMapping("/user")
-	public String user(){
-		return "/user/user";
-	}
-
-	// 권한없는 페이지를 들어갔을때 
-	@RequestMapping("/403")
-	public String access(){
-		return "/access";
-	}
-
 }

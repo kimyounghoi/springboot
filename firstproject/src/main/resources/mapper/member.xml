@@ -3,31 +3,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yhkim.study.member.MemberMapper">
-	
+	<sql id="memberData">
+		SELECT  idx,
+				id,
+				name,
+				email,
+				cellphone
+	</sql>
 	<select id="getMemberByUserName" resultType="member">
 		SELECT  idx,
 				id,
 				name,
-				pw
+				pw,
+				email,
+				cellphone 
 		FROM
 				test.members
 		WHERE
 				id = #{username}
 	</select>
 	<select id="getMemberList" resultType="member">
-		SELECT  idx,
-				id,
-				name,
-				pw
+		<include refid="memberData"/> 
 		FROM
 				test.members
 	</select>
 	
 	<select id="getMember" parameterType="member" resultType="member">
-		SELECT  idx,
-				id,
-				name,
-				pw
+		<include refid="memberData"/> 
 		FROM 
 				test.members
 		WHERE
