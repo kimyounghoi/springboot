@@ -4,6 +4,7 @@
       Search <input id="queryinput" name="query" v-model="searchQuery">
     </form>
     <pnpgrid
+      :name="gridName"
       :data="gridData"
       :columns="gridColumns"
       :filter-key="searchQuery"
@@ -14,6 +15,8 @@
 <script>
 import axios from 'axios'
 import pnpgrid from '@/components/Grid'
+import jquery from 'jquery'
+
 export default {
   name: 'User',
   components: {
@@ -21,6 +24,7 @@ export default {
   },
   data () {
     return {
+      gridName: 'yhkimgrid',
       searchQuery: '',
       gridColumns: ['idx', 'name', 'id', 'email', 'cellphone'],
       gridData:[]
@@ -33,6 +37,7 @@ export default {
     load(){
       axios.get('http://10.77.161.116/firstproject/api/userlist')
       .then(res => {
+        console.log($.fn.jquery);
         this.gridData = res.data;
       }).catch(e => {
         console.error(e)

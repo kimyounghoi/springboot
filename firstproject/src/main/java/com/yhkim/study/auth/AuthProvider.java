@@ -1,7 +1,6 @@
 package com.yhkim.study.auth;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +34,11 @@ public class AuthProvider implements AuthenticationProvider{
 		log.info("======================= private authenticate =======================");
 		log.debug("authenticate with {}, {}", id, pw);
 		Member m = new Member(id, pw);
-		m = service.getMemberByUserName(id);
+		/*m = service.getMemberByUserName(id);
 		if ( m == null || !m.getPw().equals(pw)) {
 			log.error("{} is not exist or password is not equals", id);
 			return null;
-		}
+		}*/
 		List<GrantedAuthority> authList = new ArrayList<>();
 		/** 
 		 * Role 처리 필요, 일단 임의로 USER Role을 부여한다.  

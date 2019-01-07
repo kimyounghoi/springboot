@@ -1,6 +1,6 @@
 <template>
   <div id="pnpgriddiv">
-    <table>
+    <table :id="name">
     <thead>
       <tr>
         <th v-for="key in columns"
@@ -27,6 +27,7 @@
 export default {
   name: 'Grid',
   props: {
+    name: String,
     data: Array,
     columns: Array,
     filterKey: String

@@ -12,7 +12,7 @@ import Timeline from '@/components/UITimeline'
 import Modal from '@/components/UIModal'
 
 Vue.use(Router)
-const contextRoot = '/firstproject';
+const contextRoot = '';
 
 export default new Router({
   mode: 'history',
